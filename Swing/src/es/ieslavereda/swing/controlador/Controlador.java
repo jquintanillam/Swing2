@@ -4,18 +4,22 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JSpinner;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 import es.ieslavereda.swing.vistas.Bombo;
 
 public class Controlador implements ActionListener {
 
 	private Bombo vista;
+
 	
 
 	
 	
 	public Controlador(Bombo vista) {
 		super();
+
 		this.vista = vista;
 		
 		inicializar();
@@ -53,8 +57,7 @@ public class Controlador implements ActionListener {
 		
 	}
 	private void tabla() {
-		
-		JSpinner i = vista.getExtraer();
+	
 		
 	}
 	
