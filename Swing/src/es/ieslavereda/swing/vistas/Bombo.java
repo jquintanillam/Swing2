@@ -90,20 +90,21 @@ public class Bombo extends JFrame {
 			gl_panel.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_panel.createSequentialGroup()
 					.addContainerGap()
-					.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
-						.addGroup(gl_panel.createSequentialGroup()
+					.addGroup(gl_panel.createParallelGroup(Alignment.TRAILING, false)
+						.addGroup(Alignment.LEADING, gl_panel.createSequentialGroup()
 							.addComponent(txtpnNumeroDeBolas, GroupLayout.PREFERRED_SIZE, 108, GroupLayout.PREFERRED_SIZE)
-							.addGap(12)
+							.addPreferredGap(ComponentPlacement.UNRELATED)
 							.addComponent(comboBox, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-							.addPreferredGap(ComponentPlacement.UNRELATED)
+							.addPreferredGap(ComponentPlacement.RELATED, 5, Short.MAX_VALUE)
 							.addComponent(txtpnTemasEstudiados, GroupLayout.PREFERRED_SIZE, 139, GroupLayout.PREFERRED_SIZE)
-							.addPreferredGap(ComponentPlacement.UNRELATED)
-							.addComponent(tExtudiados, GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE))
-						.addGroup(Alignment.TRAILING, gl_panel.createSequentialGroup()
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(tExtudiados, GroupLayout.PREFERRED_SIZE, 102, GroupLayout.PREFERRED_SIZE))
+						.addGroup(Alignment.LEADING, gl_panel.createSequentialGroup()
+							.addGap(10)
 							.addComponent(txtpnBolasAExtraer, GroupLayout.PREFERRED_SIZE, 110, GroupLayout.PREFERRED_SIZE)
-							.addGap(4)
+							.addPreferredGap(ComponentPlacement.RELATED)
 							.addComponent(extraer, GroupLayout.PREFERRED_SIZE, 42, GroupLayout.PREFERRED_SIZE)
-							.addGap(18)
+							.addGap(16)
 							.addComponent(txtpnSimulacion, GroupLayout.PREFERRED_SIZE, 93, GroupLayout.PREFERRED_SIZE)
 							.addPreferredGap(ComponentPlacement.RELATED)
 							.addComponent(slider, GroupLayout.PREFERRED_SIZE, 147, GroupLayout.PREFERRED_SIZE)))
@@ -113,25 +114,21 @@ public class Bombo extends JFrame {
 			gl_panel.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_panel.createSequentialGroup()
 					.addContainerGap()
-					.addGroup(gl_panel.createParallelGroup(Alignment.TRAILING)
+					.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
+						.addComponent(tExtudiados, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 						.addComponent(comboBox, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
-							.addComponent(txtpnTemasEstudiados, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)
-							.addComponent(txtpnNumeroDeBolas, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-							.addGroup(gl_panel.createSequentialGroup()
-								.addComponent(tExtudiados)
-								.addGap(17))))
+						.addComponent(txtpnTemasEstudiados, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)
+						.addComponent(txtpnNumeroDeBolas, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 					.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
 						.addGroup(gl_panel.createSequentialGroup()
 							.addPreferredGap(ComponentPlacement.RELATED)
 							.addComponent(txtpnBolasAExtraer, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE))
 						.addGroup(gl_panel.createSequentialGroup()
 							.addGap(17)
-							.addGroup(gl_panel.createParallelGroup(Alignment.TRAILING)
-								.addComponent(extraer, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-								.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
-									.addComponent(slider, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-									.addComponent(txtpnSimulacion, GroupLayout.PREFERRED_SIZE, 32, GroupLayout.PREFERRED_SIZE)))))
+							.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
+								.addComponent(slider, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+								.addComponent(txtpnSimulacion, GroupLayout.PREFERRED_SIZE, 32, GroupLayout.PREFERRED_SIZE)
+								.addComponent(extraer, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))))
 					.addGap(12))
 		);
 		panel.setLayout(gl_panel);
@@ -139,15 +136,21 @@ public class Bombo extends JFrame {
 		JPanel panel_1 = new JPanel();
 		
 		panel_2 = new JPanel();
+		
+		JPanel panel_3 = new JPanel();
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
+			gl_contentPane.createParallelGroup(Alignment.TRAILING)
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
+						.addGroup(Alignment.LEADING, gl_contentPane.createSequentialGroup()
+							.addContainerGap()
+							.addComponent(panel_3, GroupLayout.PREFERRED_SIZE, 427, GroupLayout.PREFERRED_SIZE)
+							.addGap(12))
 						.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
 							.addComponent(panel_1, Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-							.addComponent(panel, Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 440, Short.MAX_VALUE))
-						.addComponent(panel_2, GroupLayout.DEFAULT_SIZE, 440, Short.MAX_VALUE))
+							.addComponent(panel, Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 450, Short.MAX_VALUE)
+							.addComponent(panel_2, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 450, Short.MAX_VALUE)))
 					.addGap(0))
 		);
 		gl_contentPane.setVerticalGroup(
@@ -155,19 +158,21 @@ public class Bombo extends JFrame {
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addComponent(panel, GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
 					.addGap(7)
-					.addComponent(panel_1, GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
-					.addGap(7)
+					.addComponent(panel_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(panel_3, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE)
+					.addPreferredGap(ComponentPlacement.RELATED)
 					.addComponent(panel_2, GroupLayout.PREFERRED_SIZE, 35, Short.MAX_VALUE))
 		);
 		
 		btnSimulacion = new JButton("simulacion");
 		GroupLayout gl_panel_2 = new GroupLayout(panel_2);
 		gl_panel_2.setHorizontalGroup(
-			gl_panel_2.createParallelGroup(Alignment.LEADING)
-				.addGroup(Alignment.TRAILING, gl_panel_2.createSequentialGroup()
-					.addContainerGap(311, Short.MAX_VALUE)
+			gl_panel_2.createParallelGroup(Alignment.TRAILING)
+				.addGroup(gl_panel_2.createSequentialGroup()
+					.addGap(329)
 					.addComponent(btnSimulacion)
-					.addContainerGap())
+					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
 		);
 		gl_panel_2.setVerticalGroup(
 			gl_panel_2.createParallelGroup(Alignment.LEADING)
@@ -180,30 +185,37 @@ public class Bombo extends JFrame {
 		table = new JTable();
 		
 		dtm = new DefaultTableModel();
-		
-		dtm.addColumn("Simulacion nº");
-		
-		dtm.addColumn("Exito");
-		dtm.addColumn("nº aciertos");
-	
-		
+//		
+//		dtm.addColumn("Simulacion nº");
+//		
+//		dtm.addColumn("Exito");
+//		dtm.addColumn("nº aciertos");
+//	
 		table.setModel(dtm);	
 		
 		scrollPane = new JScrollPane();
-		GroupLayout gl_panel_1 = new GroupLayout(panel_1);
-		gl_panel_1.setHorizontalGroup(
-			gl_panel_1.createParallelGroup(Alignment.LEADING)
-				.addComponent(scrollPane, GroupLayout.DEFAULT_SIZE, 440, Short.MAX_VALUE)
-		);
-		gl_panel_1.setVerticalGroup(
-			gl_panel_1.createParallelGroup(Alignment.LEADING)
-				.addComponent(scrollPane, GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
-		);
 		
 		
 		scrollPane.setViewportView(table);
+		GroupLayout gl_panel_1 = new GroupLayout(panel_1);
+		gl_panel_1.setHorizontalGroup(
+			gl_panel_1.createParallelGroup(Alignment.LEADING)
+				.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 440, GroupLayout.PREFERRED_SIZE)
+		);
+		gl_panel_1.setVerticalGroup(
+			gl_panel_1.createParallelGroup(Alignment.LEADING)
+				.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 79, GroupLayout.PREFERRED_SIZE)
+		);
 		panel_1.setLayout(gl_panel_1);
 		contentPane.setLayout(gl_contentPane);
+	}
+
+	public JComboBox<?> getComboBox() {
+		return comboBox;
+	}
+
+	public void setComboBox(JComboBox<?> comboBox) {
+		this.comboBox = comboBox;
 	}
 
 	public JTextField gettExtudiados() {
@@ -237,6 +249,22 @@ public class Bombo extends JFrame {
 
 	public void setSlider(JSlider slider) {
 		this.slider = slider;
+	}
+
+	public JPanel getPanel_2() {
+		return panel_2;
+	}
+
+	public void setPanel_2(JPanel panel_2) {
+		this.panel_2 = panel_2;
+	}
+
+	public DefaultTableModel getDtm() {
+		return dtm;
+	}
+
+	public void setDtm(DefaultTableModel dtm) {
+		this.dtm = dtm;
 	}
 
 	public JButton getBtnSimulacion() {
