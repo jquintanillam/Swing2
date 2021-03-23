@@ -59,6 +59,12 @@ public class Bombo extends JFrame {
 		extraer = new JSpinner();
 		
 		slider = new JSlider();
+		
+		slider.setPaintTicks(true);
+		slider.setMajorTickSpacing(25);
+		slider.setMinorTickSpacing(5);
+		slider.setPaintLabels(true);
+		
 		slider.setToolTipText("");
 		slider.setPaintTicks(true);
 		slider.setSnapToTicks(true);
@@ -126,9 +132,9 @@ public class Bombo extends JFrame {
 						.addGroup(gl_panel.createSequentialGroup()
 							.addGap(17)
 							.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
-								.addComponent(slider, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 								.addComponent(txtpnSimulacion, GroupLayout.PREFERRED_SIZE, 32, GroupLayout.PREFERRED_SIZE)
-								.addComponent(extraer, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))))
+								.addComponent(extraer, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+								.addComponent(slider, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))))
 					.addGap(12))
 		);
 		panel.setLayout(gl_panel);
